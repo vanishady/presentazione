@@ -1,0 +1,7 @@
+#N canvas 200 200 1000 400 16;
+#X text 55 37 ------------------------------- IMPLEMENTAZIONE -------------------------------, f 85;
+#X text 55 67 Il DSL proposto segue il pattern della traduzione source-to-source. Le fasi che hanno permesso la sua realizzazione sono:, f 83;
+#X text 61 150 1 definizione di una grammatica per il linguaggio;
+#X text 61 180 2 analisi lessicale (lexing);
+#X text 61 210 3 analisi sintattica (parsing);
+#X text 61 240 4 transpilazione;

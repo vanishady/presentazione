@@ -1,0 +1,18 @@
+#N canvas 200 200 1000 400 16;
+#X obj 298 252 spigot;
+#X obj 87 248 gate;
+#X obj 87 294 bng 25 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 298 207 bng 25 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 355 207 tgl 25 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 298 297 bng 25 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 87 204 tgl 25 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 124 204 bng 25 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X text 52 47 ------------------------- MAX -------------------------, f 68;
+#X text 52 103 Anche le patch di Max sono formate da nodi e connessioni \, ma alcuni nodi hanno nomi e comportamento differente rispetto a quelli di Pd \, ad esempio:;
+#X text 52 75 Max è la controparte closed source di Pure Data.;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 6 0 1 0;
+#X connect 7 0 1 1;

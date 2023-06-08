@@ -1,0 +1,5 @@
+#N canvas 200 200 1000 400 16;
+#X text 77 40 --------------------------------- Python ---------------------------------, f 80;
+#X text 77 68 Il linguaggio scelto per interpretare i costrutti del DSL è Python. Questo mette a disposizione due pacchetti utili al progetto \, ovvero:, f 70;
+#X text 77 134 - json;
+#X text 77 162 - graphviz;

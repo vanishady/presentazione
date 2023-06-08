@@ -1,0 +1,6 @@
+#N canvas 200 200 1000 400 16;
+#X text 60 37 ----------------------- ANALISI DEL DOMINIO -----------------------, f 87;
+#X text 60 77 Nella fase di analisi è stato studiato il dominio di Pure Data e Max \, e si è giunti alla conclusione di:;
+#X text 81 139 - dare una rappresentazione formale dei concetti comuni;
+#X text 103 161 tra Pure Data e Max \;;
+#X text 80 195 - utlizzare i nodi subpatch come blocchi funzionali.;

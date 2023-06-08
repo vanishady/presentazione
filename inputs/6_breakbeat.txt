@@ -1,0 +1,40 @@
+patch my_breakbeat_2
+import pdawlib
+
+#init and bpm
+@dsp_on()
+@dsp_off()
+toggle() > @onoff()
+loadbang()>msg(160)>@bpm_out()
+
+#clocks
+fourbars = @genpatternof(4) #generate new pattern each 4 bars
+crashclock = @clockmul(1, 'none') #clock for whole note 
+bassclock = @clockdiv(8) #clock for 8th notes
+drumclock = @clockdiv(16) #clock for 16th notes
+ambientclock = @clockmul(2, '2_mes_time') #clock for note of 2 bars
+
+#instruments
+bass_seq = @genbass([100,90,85,75,90,85,75,90], 40,'phrygian','bass') 
+@bind(bassclock, bass_seq, 8)
+
+#drum_samples = ['./samples/kick.wav', './samples/clhat.wav', './samples/dnb.wav', './samples/hihat_cch.wav', './samples/hihat_metal.wav']
+drum_samples = ['./samples/HouseGen-Snare30.wav', './samples/Collider-Fifth-CHat-02.wav', './samples/HouseGen-Kick-25.wav', './samples/Attack-Hat-12.wav', './samples/05.wav']
+drum_seq = @gendrums(drum_samples, 16, 'drums')
+@bind(drumclock, drum_seq, 16)
+
+ambient_pad = @ambient(64, 'phrygian', 'pad')
+@bind(ambientclock, ambient_pad, 1)
+
+crash = @sampleread('./samples/hihat_snake.wav','crash')
+@bind(crashclock, crash, 1)
+
+#out = dac~()
+#[drum_seq, bass_seq, ambient_pad, crash] > [1:out, 2:out]
+
+key()>num()>sel(103)>bang()>t=toggle()
+[loadbang(), r('ON')] > msg('0') > t > s('glitch_onoff')
+@glitchmix(['drums','crash'], ['bass','pad'], './samples/MA-Fizz-Cymbal.wav')
+r('random_glitch')>vsl()>s('glitch_value')
+;
+
