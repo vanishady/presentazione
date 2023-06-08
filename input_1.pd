@@ -1,0 +1,15 @@
+#N canvas 200 150 1000 500 16;
+#X text 81 102 toggle() > @onoff ( );
+#X text 79 67 import pdawlib;
+#X text 58 21 ------------------------- codice sorgente -------------------------, f 70;
+#X text 82 122 @bpm(60);
+#X text 78 160 clock = @loneclock(4);
+#X text 78 183 res = @midikeys(60 \, 'natural_minor');
+#X text 78 208 mel = @scales(res), f 103;
+#X text 80 246 mysynth = @additivesynth(0 \, [3 \, 5 \, 7 \, 9] \, [0.85 \, 0.5 \, 0.35 \, 0.25]), f 68;
+#X text 80 270 myadsr = @adsr(1000 \, 1500 \, 0.5 \, 1500 \, 1000);
+#X text 78 315 clock > mel > [mysynth \, b=bang()];
+#X text 78 340 b > [1:myadsr \, 2:myadsr];
+#X text 79 363 out = dac~();
+#X text 78 386 mysynth > mul=*~();
+#X text 78 411 myadsr > 2:mul > [1:out \, 2:out];

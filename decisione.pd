@@ -1,0 +1,9 @@
+#N canvas 200 200 1000 400 16;
+#X text 66 51 Il linguaggio è stato implementato al fine di fornire una visual-to-textual representation per una rappresentazione grafica già esistente. Ciò comporta:;
+#X text 66 27 ------------------------- DECISIONE --------------------------, f 66;
+#X text 83 238 - implementazione di una libreria standard con blocchi;
+#X text 83 142 - disposizione automatica dei nodi sulla patch \;;
+#X text 83 166 - eliminazione/automatizzazione di task ripetitivi \;;
+#X text 83 190 - GUI ordinata grazie all'uso delle subpatch \;;
+#X text 102 263 funzionali alla programmazione musicale.;
+#X text 83 214 - possibilità di debug e controllo versione \;;

@@ -1,0 +1,3 @@
+#N canvas 200 200 1000 400 16;
+#X text 86 42 ----------------------------- ANTLR -----------------------------, f 77;
+#X text 86 90 ANTLR è un tool che mette a disposizione del programmatore un framework per il riconoscimento linguistico e lo sviluppo di compilatori e traduttori a partire da una descrizione grammaticale., f 65;

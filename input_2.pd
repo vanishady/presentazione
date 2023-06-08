@@ -1,0 +1,11 @@
+#N canvas 100 170 1200 400 16;
+#X text 79 101 toggle() > @onoff ( );
+#X text 81 121 @bpm(140);
+#X text 79 67 import pdawlib;
+#X text 82 233 drumclock = @clockdiv(16);
+#X text 81 294 @bind(drumclock \, hatseq \, 16);
+#X text 81 269 @bind(drumclock \, kickseq \, 16);
+#X text 81 330 mix = @basicmixer( [’kick’ \, ’hat’] \, [0.4 \, 0.4]);
+#X text 76 24 ------------------------- codice sorgente -------------------------, f 70;
+#X text 82 159 kickseq = @drums ([0 \, 0 \, 0 \, 1 \, 0 \, 0 \, 0 \, 1 \, 0 \, 0 \, 0 \, 1 \, 0 \, 0 \, 0 \, 1 ] \, ’./samples/kick.wav’ \, ’kick’), f 103;
+#X text 82 186 hatseq = @drums ([0 \, 0 \, 0 \, 0 \, 1 \, 1 \, 1 \, 1 \, 0 \, 0 \, 0 \, 0 \, 1 \, 1 \, 1 \, 1] \, ’./samples/clhat.wav’ \, ’hat’), f 103;

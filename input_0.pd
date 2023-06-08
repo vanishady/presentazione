@@ -1,0 +1,10 @@
+#N canvas 200 200 1000 400 16;
+#X text 58 21 ------------------------- codice sorgente -------------------------, f 70;
+#X text 64 80 freq = 432;
+#X text 64 103 armonics = [3 \, 5 \, 7 \, 9];
+#X text 64 126 volumes = [0.85 \, 0.5 \, 0.35 \, 0.25];
+#X text 64 181 msg(freq) > freq_node = num();
+#X text 64 260 for i in range @len(armonics):;
+#X text 101 288 freq_node > * (armonics[i]) > num() > osc~() > *~ (volumes[i]) > finalvol, f 80;
+#X text 65 316 end;
+#X text 64 210 freq_node > osc~() > finalvol = *~ (0.25) > [out=dac~() \, 2:out], f 70;
